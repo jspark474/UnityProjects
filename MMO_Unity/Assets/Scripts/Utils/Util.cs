@@ -14,7 +14,7 @@ public class Util
     public static GameObject FindChild(GameObject go, string name = null, bool recursive = false)
     {
         Transform transform = FindChild<Transform>(go, name, recursive);
-        if (transform != null)
+        if (transform == null)
             return null;
         return transform.gameObject;
     }
