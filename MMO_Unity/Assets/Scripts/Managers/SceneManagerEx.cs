@@ -8,7 +8,7 @@ public class SceneManagerEx
     public BaseScene CurrentScene { get { return GameObject.FindObjectOfType<BaseScene>(); } }
     public void LoadScene(Define.Scene type)
     {
-        CurrentScene.Clear();
+        Managers.Clear();
         SceneManager.LoadScene(GetSceneName(type));
     }
 
@@ -16,5 +16,10 @@ public class SceneManagerEx
     {
         string name = System.Enum.GetName(typeof(Define.Scene), type); //리뷰 필요
         return name;
+    }
+
+    public void Clear()
+    {
+        CurrentScene.Clear();
     }
 }
