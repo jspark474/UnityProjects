@@ -13,6 +13,8 @@ public class GameScene : BaseScene
 
         Managers.UI.ShowSceneUI<UI_Inven>();
 
+        //Dictionary<int, Stat> dict = Managers.Data.StatDict;
+
         //co =  StartCoroutine("ExplodeAfterSeconds", 4f);
         //StopCoroutine(co);
     }
